@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Project</title>
+
+  <!-- Bootstrap CSS for product cards only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<!-- First Navbar -->
+<nav id="first-nav" class="fixed-top">
+  <div class="container-fluid first-nav-fluid" id="fst-nav-fluid">
+    <a href="#home" class="navbar-brand logo" id="logo">MyShop</a>
+
+    <form id="search-form" class="d-flex flex-grow-1 mx-5">
+      <input type="text" id="search-input" placeholder="Search products" class="form-control">
+      <button type="submit" id="search-icon-btn" class="btn btn-outline-warning">
+        <i class="fas fa-search" id="search-icon"></i>
+      </button>
+    </form>
+
+    <div class="account-cart-container">
+      <div class="account-buttons d-flex gap-4">
+      <a href="#" class="btn btn-outline-light" id="sign-in">Sign In</a>
+      <a href="#" class="btn btn-outline-light" id="sign-up">Sign Up</a>
+      <a href="#" class="btn btn-outline-light btn-sm" id="account">Account</a>
+    </div>
+    <a href="cart.html" class="btn btn-outline-warning position-relative btn-sm d-flex" id="cart-icon">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
+      <span>Cart</span>
+    </a>
+
+      
+        <span class="search-icon-sm-screen d-sm-inline-block" id="search-icon-sm-screen"><i class="fas fa-search"></i><span>Search</span></span>
+      
+
+      <button id="menu-btn" aria-expanded="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg><span class="menu-text" id="menu-text">Menu</span>
+</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Second Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" id="dropdown-nav">
+  <div class="container-fluid" id="snd-nav-fluid">
+    <ul class="navbar-nav mx-auto" id="category-menu">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="electronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+          Electronics
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+          <li><a class="dropdown-item" href="#">Smartphones</a></li>
+          <li><a class="dropdown-item" href="#">Laptops</a></li>
+          <li><a class="dropdown-item" href="#">Cameras</a></li>
+          <li><a class="dropdown-item" href="#">Headphones</a></li>
+          <li><a class="dropdown-item" href="#">Wearables</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="fashionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Fashion
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
+          <li><a class="dropdown-item" href="#">Men's Clothing</a></li>
+          <li><a class="dropdown-item" href="#">Women's Clothing</a></li>
+          <li><a class="dropdown-item" href="#">Shoes</a></li>
+          <li><a class="dropdown-item" href="#">Accessories</a></li>
+          <li><a class="dropdown-item" href="#">Bags</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="beautyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Beauty
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="beautyDropdown">
+          <li><a class="dropdown-item" href="#">Makeup</a></li>
+          <li><a class="dropdown-item" href="#">Skincare</a></li>
+          <li><a class="dropdown-item" href="#">Haircare</a></li>
+          <li><a class="dropdown-item" href="#">Fragrances</a></li>
+          <li><a class="dropdown-item" href="#">Personal Care</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Home & Kitchen
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+          <li><a class="dropdown-item" href="#">Furniture</a></li>
+          <li><a class="dropdown-item" href="#">Appliances</a></li>
+          <li><a class="dropdown-item" href="#">Cookware</a></li>
+          <li><a class="dropdown-item" href="#">Home Decor</a></li>
+          <li><a class="dropdown-item" href="#">Storage</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="sportsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Sports
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="sportsDropdown">
+          <li><a class="dropdown-item" href="#">Fitness Equipment</a></li>
+          <li><a class="dropdown-item" href="#">Outdoor Gear</a></li>
+          <li><a class="dropdown-item" href="#">Team Sports</a></li>
+          <li><a class="dropdown-item" href="#">Cycling</a></li>
+          <li><a class="dropdown-item" href="#">Shoes</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="toysDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Toys
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="toysDropdown">
+          <li><a class="dropdown-item" href="#">Action Figures</a></li>
+          <li><a class="dropdown-item" href="#">Board Games</a></li>
+          <li><a class="dropdown-item" href="#">Dolls</a></li>
+          <li><a class="dropdown-item" href="#">Educational Toys</a></li>
+          <li><a class="dropdown-item" href="#">RC Toys</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="booksDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Books
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="booksDropdown">
+          <li><a class="dropdown-item" href="#">Fiction</a></li>
+          <li><a class="dropdown-item" href="#">Non-fiction</a></li>
+          <li><a class="dropdown-item" href="#">Comics</a></li>
+          <li><a class="dropdown-item" href="#">Children's Books</a></li>
+          <li><a class="dropdown-item" href="#">Textbooks</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="groceriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Groceries
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="groceriesDropdown">
+          <li><a class="dropdown-item" href="#">Fruits</a></li>
+          <li><a class="dropdown-item" href="#">Vegetables</a></li>
+          <li><a class="dropdown-item" href="#">Beverages</a></li>
+          <li><a class="dropdown-item" href="#">Snacks</a></li>
+          <li><a class="dropdown-item" href="#">Dairy</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+          <a href="#more-info" class="nav-link btn btn-outline-primary" aria-expaned = "false" id="moreInformation" role="button" data-bs-toggle="dropdown">More Info</a>
+          <ul class="dropdown-menu" aria-labelledby="moreInformation">
+            <li><a class="dropdown-item" href="#about">About</a></li>
+            <li><a class="dropdown-item" href="#home">Home</a></li>
+            <li><a class="dropdown-item" href="#products">Products</a></li>
+            <li><a class="dropdown-item" href="#contact">Contact</a></li>
+            <li><a class="dropdown-item" href="#account">Account</a></li>
+          </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--hero section-->
+<section class="container py-5 mt-2">
+  <div class="row shadow hero-container">
+    <div class="col-6 text-center pb-2 pt-md-4">
+      <h1 class="display-5 fw-bold">Welcome to our store!</h1>
+      <p class="mb-4 fs-4">Discover high-quality products at unbeatable prices.</p>
+      <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+    </div>
+    <div class="col-6">
+      <img src="data/images/ceramic-cookware.webp" alt="Ceramic Cookware" class="img-fluid rounded-4">
+    </div>
+  </div>
+</section>
+<!--here sction ends here-->
+
+<!--sevice section starts here-->
+<section class="py-4 bg-light text-center">
+  <div class="container">
+    <div class="row row-cols-lg-4 row-cols-2 g-2">
+
+      <div class="col text-center d-flex align-items-center gap-2">
+        <i class="fa-solid fa-truck fa-2x text-primary fs-4"></i>
+        <div class="ms-1">
+          <h6 class="mb-2">Free Shipping</h6>
+          <p class="small text-muted mb-0">On all orders over $99</p>
+        </div>
+      </div>
+
+      <div class="col text-center d-flex align-items-center gap-2">
+        <i class="fa-solid fa-lock fa-2x text-primary fs-4"></i>
+        <div class="ms-1">
+          <h6 class="mb-2">Secure Payment</h6>
+          <p class="small text-muted mb-0">We ensure secure payment</p>
+        </div>
+      </div>
+
+      <div class="col text-center d-flex align-items-center gap-2">
+        <i class="fa-solid fa-shield fa-2x text-primary fs-4"></i>
+        <div class="ms-1">
+          <h6 class="mb-2">100% Money Back</h6>
+          <p class="small text-muted mb-0">30 Days Return Policy</p>
+        </div>
+      </div>
+
+      <div class="col text-center d-flex align-items-center gap-2">
+        <i class="fa-solid fa-headphones fa-2x text-primary fs-4"></i>
+        <div class="ms-1">
+          <h6 class="mb-2">Online Support</h6>
+          <p class="small text-muted mb-0">24/7 Dedicated Support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--section service ends here-->
+
+<!--second banner like starts here-->
+<section class="container py-2 my-2">
+  <div class="row gap-4 py-3 my-2">
+    <div class="col-12 col-md-6 position-relative shadow">
+      <img src="data/images/bed.webp" alt="bed" class="img-fluid rounded-4">
+      <p class="position-absolute badge bg-primary top-0 start-0 p-3 mt-4  ms-5">49% Off</p>
+      <p class="position-absolute badge bg-warning top-0 end-0 p-3 mt-4 me-5 fs-6"> Top selling product</p>
+      <button class="btn btn-outline-primary p-2 position-absolute bottom-0 right-0 mb-5 me-5 fs-5">Shop now</button>
+    </div>
+    <div class="col-12 col-md-5">
+      <div class="row">
+            <div class="col-12 position-relative shadow">
+          <img src="data/images/egg-coker-electric.webp" alt="cookware" class="w-50 rounded-4">
+          <p class="position-absolute badge bg-primary top-0 start-0 p-3 mt-4  ms-5">40% Off</p>
+          <p class="position-absolute badge bg-warning top-0 end-0 p-3 mt-4 me-5 fs-6"> Top selling product</p>
+           <button class="btn btn-outline-primary p-2 position-absolute bottom-0 right-0 mb-5 me-5 fs-5">Shop now</button>
+        </div>
+        <div class="col-12 position-relative shadow">
+          <img src="data/images/home-kitchen-cookware.webp" alt="glass cup" class="w-50 rounded-4">
+          <p class="position-absolute badge bg-primary top-0 start-0 p-3 mt-4 ms-5">49% Off</p>
+          <p class="position-absolute badge bg-warning top-0 end-0 p-3 mt-5 me-5 fs-6"> Top selling product</p>
+           <button class="btn btn-outline-primary p-2 position-absolute bottom-0 end-0 mb-5 me-5 fs-5">Shop now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--second banner like ends here-->
+
+<!--service starts here-->
+<div class="d-flex flex-column text-center mb-3">
+    <h3>Featured products</h3>
+    <div class="d-flex align-items-center gap-3 mx-auto">
+      <p class="dere-underline" id="new-arrival">New Arrival</p>
+      <p id="top-selling">Best selling</p>
+      <p id="top-rated">Top rated</p>
+    </div>
+</div>
+<!--servive ends here-->
+
+<!--product cards starts here-->
+<main>
+  <div class="container my-4">
+    <div class="row row-cols-xxl-10 row-cols-xl-7 row-cols-lg-5 row-cols-md-3 row-cols-2 g-3" id="products-container">
+     
+    </div>
+  </div>
+</main>
+<!--product cards ends here-->
+
+<!-- Bootstrap JS for dropdowns -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script type="module" src="JS/index.js"></script>
+</body>
+</html>  

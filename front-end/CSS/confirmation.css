@@ -1,0 +1,100 @@
+
+    body {
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+      
+    }
+    .confirmed-text, .confirmed-header{
+      text-align: center;
+    }
+    .container {
+      background: white;
+      max-width: 90%;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin: 2px auto;
+    }
+    .header-order-info{
+      display:flex;
+      gap:20px;
+      justify-content:space-between;
+      line-height: 1.5;
+    }
+    .header-order-info p, .confirmed-text, .text-info p{
+      font-size:19px;
+    }
+    .single-product-track-container{
+      display:flex;
+      gap: 20px;
+      justify-content:space-between;
+      margin-top:30px;
+      border-radius: 20px;
+      align-items: center;
+      padding:10px;
+      background-color: antiquewhite;
+    }
+    .product-text-info{
+      display:flex;
+      gap: 20px;
+      justify-content:space-between;
+    }
+    .single-product-track-container img{
+      width:200px;
+    }
+    .track-order-btn{
+      padding:10px;
+      font-size: 19px;
+      border: none;
+      background-color: aliceblue;
+      height:60px;
+      width:200px;
+      cursor:pointer;
+      border-radius:10px;
+    }
+    .track-order-btn:hover{
+      background-color: hsla(0, 0%, 97%, 0.931);
+    }
+
+    .track-order-btn:active{
+      background-color: aliceblue;
+    }
+
+
+    @media screen and (max-width: 680px){
+      .container{
+         padding: 4px;
+         width:99%;
+      }
+      .single-product-track-container img{
+      width:150px;
+    }
+    .track-order-btn{
+      font-size:16px;
+      width: 80%;
+    }
+     .header-order-info p, .confirmed-text, .text-info p{
+      font-size:16px;
+    }
+    .single-product-track-container{
+      flex-direction:column;
+    }
+    }
+    .back-to-home{
+      padding:20px;
+      width:200px;
+      background-color: orange;
+      border-radius:20px;
+      border:none;
+      text-align: center;
+      display:block;
+      margin: 20px auto;
+      font-size: 20px;
+      cursor:pointer;
+    }
+    .back-to-home:hover{
+      background-color: rgba(255, 166, 0, 0.753);
+    }
+    .back-to-home:active{
+       background-color: orange;
+    }

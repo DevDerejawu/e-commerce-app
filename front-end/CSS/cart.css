@@ -1,0 +1,65 @@
+/* Cart Section */
+body{
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+nav *{
+  font-size: 18px;
+}
+.cart-section {
+  background-color: #f8f9fa;
+}
+
+/* Single Cart Item */
+.a-single-cart-container {
+  background-color: #fff;
+}
+
+.cart-img {
+  width: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+.product-name {
+  font-weight: 500;
+}
+
+.product-price {
+  font-weight: 700;
+  color: #28a745;
+}
+
+/* Delivery Options */
+.form-check-label {
+  cursor: pointer;
+ 
+}
+.form-check-input{
+   border: 1px solid blue;
+}
+
+.form-check-input:checked {
+  border-width:3px;
+  border-color: blue;
+  background-color: #ffc107;
+}
+
+/* Buttons */
+.btn-outline-success, .btn-danger, .btn-warning {
+  border-radius: 30px;
+}
+
+/* Order Summary */
+.border {
+  border-color: #dee213 !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+.not-allowed {
+  cursor: not-allowed !important;
+  opacity: 0.5;}

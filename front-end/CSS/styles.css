@@ -1,0 +1,129 @@
+/*index.html file styles starts here*/
+
+.first-nav-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+   background-color: green;
+  color: #fff;
+  max-height:150px;
+  min-height:55px;
+  flex-wrap: wrap;
+  padding:5px;
+}
+
+.account-cart-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:20px;
+}
+#logo.logo{
+  font-size:30px;
+}
+#search-input{
+  margin-right:0px;
+  height:35px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+#search-icon{
+  margin-left:0px;
+}
+
+#search-icon-btn{
+  height:35px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#search-form{
+  max-width:500px;
+  min-width:200px;
+}
+
+#search-icon-sm-screen span{
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+#menu-btn{
+  background:none; border:none; cursor:pointer;
+}
+
+#menu-text{
+  font-size: 18px;
+  color:#ffe;
+}
+
+#search-icon-sm-screen:hover, #menu-text:hover{
+  color: #ffc107;
+}
+ .dere-underline{
+  border-bottom: solid 3px blue;
+ }
+ #top-selling, #top-rated, #new-arrival{
+  cursor:pointer;
+ }
+
+/* Large screens */
+@media only screen and (min-width: 992px) { 
+  #account, #search-icon-sm-screen, #menu-text.menu-text{
+    display:none !important;
+  }
+  body{
+    padding-top: 55px;
+  }
+}
+/* Medium screens */
+@media only screen and (min-width: 768px) and (max-width: 992px) { 
+   #sign-in, #sign-up, #search-icon-sm-screen{
+    display:none !important;
+  }
+  #dropdown-nav {
+ max-height:300px;
+overflow-y: scroll;
+}
+body{
+    padding-top: 55px;
+  }
+}
+
+/* Small screens*/
+@media only screen and (max-width: 768px) {
+  #logo.logo{
+    width:100%;
+    text-align: center;
+    margin:5px;
+  }
+  #search-form, #sign-in, #sign-up{
+    display:none !important;
+  }
+  #search-icon-sm-screen{
+ font-size:25px;
+ cursor:pointer;
+}
+#dropdown-nav {
+ max-height:300px;
+overflow-y: scroll;
+
+}
+
+#fst-nav-fluid{
+  display:flex;
+  flex-direction: column;
+}
+.account-cart-container{
+  display:flex;
+  width:100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap:5px;
+}
+body{
+  padding-top: 80px;
+}
+ }
+/*index.html file styles ends here*/
+
+
